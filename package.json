@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "@splidejs/splide": "^4.0.6",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-ejs-layouts": "^2.5.1",
+    "mongoose": "^6.3.5",
+    "nodemon": "^2.0.16",
+    "waypoints": "^4.0.1"
+  },
+  "name": "visit-card",
+  "description": "",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clementvermylen/visit-card.git"
+  },
+  "author": "clement vermylen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clementvermylen/visit-card/issues"
+  },
+  "homepage": "https://github.com/clementvermylen/visit-card#readme"
+}
