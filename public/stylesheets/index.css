@@ -33,6 +33,28 @@
   }
 }
 
+@-webkit-keyframes displaceContentLeft {
+  from {
+    -webkit-transform: translateX(0em);
+            transform: translateX(0em);
+  }
+  to {
+    -webkit-transform: translateX(20vw);
+            transform: translateX(20vw);
+  }
+}
+
+@keyframes displaceContentLeft {
+  from {
+    -webkit-transform: translateX(0em);
+            transform: translateX(0em);
+  }
+  to {
+    -webkit-transform: translateX(20vw);
+            transform: translateX(20vw);
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -46,6 +68,10 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .vcard .main-container {
@@ -84,15 +110,22 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
   -webkit-box-shadow: 0 2.8px 2.2px rgba(40, 42, 58, 0.034), 0 6.7px 5.3px rgba(40, 42, 58, 0.034), 0 12.5px 10px rgba(40, 42, 58, 0.034), 0 22.3px 17.9px rgba(40, 42, 58, 0.034), 0 41.8px 33.4px rgba(40, 42, 58, 0.034), 0 100px 80px rgba(40, 42, 58, 0.034);
           box-shadow: 0 2.8px 2.2px rgba(40, 42, 58, 0.034), 0 6.7px 5.3px rgba(40, 42, 58, 0.034), 0 12.5px 10px rgba(40, 42, 58, 0.034), 0 22.3px 17.9px rgba(40, 42, 58, 0.034), 0 41.8px 33.4px rgba(40, 42, 58, 0.034), 0 100px 80px rgba(40, 42, 58, 0.034);
+}
+
+.vcard .main-container .picture-container:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .vcard .main-container .picture-container .name {
   padding-bottom: 1vh;
   font-size: 14px;
   font-family: "Ubuntu", sans-serif;
-  color: #eee7e7;
+  color: #FFFE;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -106,11 +139,7 @@ body {
   padding-bottom: 1vh;
   font-size: 14px;
   font-family: "Ubuntu", sans-serif;
-  background: #7ee8fa;
-  background: linear-gradient(97deg, #7ee8fa 0%, #dd4fec 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7ee8fa",endColorstr="#dd4fec",GradientType=1);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #121825;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -183,42 +212,47 @@ body {
 }
 
 .vcard .main-container div.about-me .h1 {
-  color: #eee7e7;
+  color: #FFFE;
   font-size: 30px;
   padding-bottom: 1.5vh;
   padding-top: 2vh;
 }
 
 .vcard .main-container div.about-me .h2 {
-  background: #7ee8fa;
-  background: linear-gradient(97deg, #7ee8fa 0%, #dd4fec 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7ee8fa",endColorstr="#dd4fec",GradientType=1);
+  background: #6699cc;
+  background: linear-gradient(97deg, #6699cc 0%, #b3b5bd 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6699cc",endColorstr="#b3b5bd",GradientType=1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 18px;
   width: 70vh;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
+}
+
+.vcard .main-container div.about-me .h2 :first-child {
+  padding-right: 5px;
 }
 
 .vcard .main-container div.about-me .nav-line {
   background-color: #B3B5BD;
   width: 35vh;
-  height: 1px;
+  min-height: 1px;
 }
 
 .vcard .main-container div.about-me .skills-list {
   padding-top: 2vh;
-  width: 70vh;
+  width: 60vh;
   height: 5vh;
+  gap: 10px;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #7ee8fa;
-  background: linear-gradient(97deg, #7ee8fa 0%, #dd4fec 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7ee8fa",endColorstr="#dd4fec",GradientType=1);
+  background: #6699cc;
+  background: linear-gradient(97deg, #6699cc 0%, #b3b5bd 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6699cc",endColorstr="#b3b5bd",GradientType=1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -228,46 +262,45 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  background: #7ee8fa;
-  background: linear-gradient(97deg, #7ee8fa 0%, #dd4fec 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7ee8fa",endColorstr="#dd4fec",GradientType=1);
+  background: #6699cc;
+  background: linear-gradient(97deg, #6699cc 0%, #b3b5bd 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6699cc",endColorstr="#b3b5bd",GradientType=1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   width: 85px;
   height: 25px;
-  margin-right: 1vh;
 }
 
 .vcard .main-container div.about-me .p {
-  padding-top: 5vh;
+  padding-top: 2vh;
   color: #B3B5BD;
   font-family: "Raleway", sans-serif;
   font-size: 16px;
 }
 
 .vcard .main-container div.about-me .button-container {
-  padding-top: 8vh;
+  padding-top: 3vh;
   font-weight: bold;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   width: 100%;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .vcard .main-container div.about-me .button-container .resume {
-  background: #7ee8fa;
-  background: linear-gradient(97deg, #7ee8fa 0%, #dd4fec 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7ee8fa",endColorstr="#dd4fec",GradientType=1);
-  -webkit-text-fill-color: white;
+  background: #6699cc;
+  background: linear-gradient(97deg, #6699cc 0%, #b3b5bd 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6699cc",endColorstr="#b3b5bd",GradientType=1);
+  -webkit-text-fill-color: #121825;
   text-decoration: none;
-  color: #B3B5BD;
+  color: #121825;
   border: 1px solid;
   border-radius: 30px;
   height: 6vh;
@@ -291,25 +324,34 @@ body {
 }
 
 .vcard .main-container div.about-me .button-container .resume:hover {
-  background: #7ee8fa;
-  background: linear-gradient(97deg, #7ee8fa 0%, #dd4fec 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7ee8fa",endColorstr="#dd4fec",GradientType=1);
+  background: #6699cc;
+  background: linear-gradient(97deg, #6699cc 0%, #b3b5bd 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6699cc",endColorstr="#b3b5bd",GradientType=1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: white;
+  color: #FFFE;
 }
 
-.vcard .main-container div.about-me .button-container .portfolio {
-  background: #7ee8fa;
-  background: linear-gradient(97deg, #7ee8fa 0%, #dd4fec 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7ee8fa",endColorstr="#dd4fec",GradientType=1);
-  -webkit-text-fill-color: white;
+.vcard .main-container div.about-me .portfolio-container {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-top: 11vh;
+}
+
+.vcard .main-container div.about-me .portfolio-container .portfolio {
+  background: #6699cc;
+  background: linear-gradient(97deg, #6699cc 0%, #b3b5bd 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6699cc",endColorstr="#b3b5bd",GradientType=1);
+  -webkit-text-fill-color: #121825;
   text-decoration: none;
-  color: #B3B5BD;
+  color: #121825;
   border: 1px solid;
   border-radius: 30px;
-  height: 6vh;
-  width: 10vw;
+  height: 4vw;
+  width: 4vw;
   background-color: #121825;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -328,19 +370,34 @@ body {
           box-shadow: 0 2.8px 2.2px rgba(40, 42, 58, 0.034), 0 6.7px 5.3px rgba(40, 42, 58, 0.034), 0 12.5px 10px rgba(40, 42, 58, 0.034), 0 22.3px 17.9px rgba(40, 42, 58, 0.034), 0 41.8px 33.4px rgba(40, 42, 58, 0.034), 0 100px 80px rgba(40, 42, 58, 0.034);
 }
 
-.vcard .main-container div.about-me .button-container .portfolio:hover {
-  background: #7ee8fa;
-  background: linear-gradient(97deg, #7ee8fa 0%, #dd4fec 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7ee8fa",endColorstr="#dd4fec",GradientType=1);
+.vcard .main-container div.about-me .portfolio-container .portfolio:hover {
+  background: #6699cc;
+  background: linear-gradient(97deg, #6699cc 0%, #b3b5bd 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6699cc",endColorstr="#b3b5bd",GradientType=1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: white;
+  color: #FFFE;
 }
 
 .polygon1 {
+  right: 65vw;
+  position: absolute;
+  -webkit-animation-name: displaceContentLeft;
+          animation-name: displaceContentLeft;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   -webkit-clip-path: polygon(0 0, 32% 0, 20% 100%, 0 100%);
           clip-path: polygon(0 0, 32% 0, 20% 100%, 0 100%);
-  background-color: #6699CC;
+  background: #6699cc;
+  background: linear-gradient(97deg, #6699cc 0%, #b3b5bd 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6699cc",endColorstr="#b3b5bd",GradientType=1);
+  -webkit-text-fill-color: #121825;
   height: 100%;
   width: 55%;
   -ms-flex-item-align: start;
@@ -398,31 +455,47 @@ section.portfolio .gallery-container {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 140px;
+}
+
+section.portfolio .project-title {
+  font-size: 22px;
+  color: #B3B5BD;
+  font-family: "Ubuntu", sans-serif;
+  text-decoration: none;
+}
+
+section.portfolio .project-title a:link {
+  text-decoration: none;
+}
+
+section.portfolio .project-title a:visited {
+  text-decoration: none;
+}
+
+section.portfolio .project-title a:hover {
+  text-decoration: none;
+}
+
+section.portfolio .project-title a:active {
+  text-decoration: none;
 }
 
 section.portfolio .project-title h2 {
   font-size: 22px;
   color: #B3B5BD;
   font-family: "Ubuntu", sans-serif;
+  -webkit-transition: 0.4s ease-out all;
+  transition: 0.4s ease-out all;
 }
 
-section.portfolio .project-title h2h2:link {
+section.portfolio .project-title h2:hover {
   text-decoration: none;
-}
-
-section.portfolio .project-title h2h2:visited {
-  text-decoration: none;
-}
-
-section.portfolio .project-title h2h2:hover {
-  text-decoration: none;
-}
-
-section.portfolio .project-title h2h2:active {
-  text-decoration: none;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 section.portfolio h1 {
@@ -431,6 +504,9 @@ section.portfolio h1 {
 }
 
 section.portfolio .container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 300px;
   width: 600px;
   display: -webkit-box;
@@ -442,16 +518,21 @@ section.portfolio .card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 280px;
+  height: 340px;
   width: 400px;
   border-radius: 10px;
   -webkit-box-shadow: 0 2.8px 2.2px rgba(40, 42, 58, 0.034), 0 6.7px 5.3px rgba(40, 42, 58, 0.034), 0 12.5px 10px rgba(40, 42, 58, 0.034), 0 22.3px 17.9px rgba(40, 42, 58, 0.034), 0 41.8px 33.4px rgba(40, 42, 58, 0.034), 0 100px 80px rgba(40, 42, 58, 0.034);
           box-shadow: 0 2.8px 2.2px rgba(40, 42, 58, 0.034), 0 6.7px 5.3px rgba(40, 42, 58, 0.034), 0 12.5px 10px rgba(40, 42, 58, 0.034), 0 22.3px 17.9px rgba(40, 42, 58, 0.034), 0 41.8px 33.4px rgba(40, 42, 58, 0.034), 0 100px 80px rgba(40, 42, 58, 0.034);
   margin-left: 100px;
-  -webkit-transition: 0.4s ease-out;
-  transition: 0.4s ease-out;
+  -webkit-transition: 0.4s ease-out all;
+  transition: 0.4s ease-out all;
   position: relative;
   left: 0px;
+}
+
+section.portfolio .card:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 section.portfolio .card:not(:first-child) {
@@ -460,17 +541,9 @@ section.portfolio .card:not(:first-child) {
 
 section.portfolio .card:hover ~ .card {
   position: relative;
-  left: 105px;
+  left: 110px;
   -webkit-transition: 0.4s ease-out;
   transition: 0.4s ease-out;
-}
-
-section.portfolio .title {
-  color: white;
-  font-weight: 300;
-  position: absolute;
-  left: 20px;
-  top: 15px;
 }
 
 div.slide {
@@ -524,7 +597,10 @@ div.slide {
 }
 
 section.first {
-  background-color: #6699CC;
+  background: #6699cc;
+  background: linear-gradient(97deg, #6699cc 0%, #b3b5bd 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6699cc",endColorstr="#b3b5bd",GradientType=1);
+  -webkit-text-fill-color: #121825;
 }
 
 section.first .dark {

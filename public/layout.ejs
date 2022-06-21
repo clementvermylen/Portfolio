@@ -4,7 +4,7 @@
   <title>Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"></script>
-  <script type="module" src="/static/scripts/index.js"></script>
+  <script type="module" src="./static/scripts/index.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet"> 
@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
   <script rel="application/javascript" src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.6/dist/js/splide.min.js"></script>
@@ -45,7 +46,7 @@
         <h1 class="h1">
           &lt;/About me&gt;
         </h1>
-        <h2 class="h2">Brussels / 20 / Frontend / Fullstack</h2>
+        <h2 class="h2"><i class="fa-solid fa-location-dot"></i>Brussels / Frontend / Fullstack</h2>
         <div class="nav-line"></div>
         <ul class="skills-list flex">
           <p class="skill flex">Javascript</p>
@@ -56,15 +57,21 @@
           <p class="skill flex">MongoDB</p>
         </ul>
         <p class="p">
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          Hi, I'm Clément.<br><br>
+          I'm a junior web developer driven by curiosity and hungry to learn more <br>
+          I am eager to acquire professional experience, deepen my skills, and expand my portfolio. <br>
+          I have a passion to create and exceed myself at every occasion, and would be more than happy to prove it ! <br> <br>
+          If you're interested in my profile, or if you simply have a project that you want to discuss, feel free to contact me by email and lets make those ideas come to reality !
         </p>
         <div class="button-container flex">
-          <div class="portfolio flex">
-            Portfolio
-          </div>
-          <a class="resume flex" href="https://pdfhost.io/v/.8ktfPhKr_CV" target=”_blank”>
+          <a class="resume flex" href="https://drive.google.com/file/d/1zYQhiZxf0wrPfqreDLsvgXFEU0Aq0Ol3/view?usp=sharing" target=”_blank”>
             Resume
           </a>
+        </div>
+        <div class="portfolio-container flex">
+          <div class="portfolio flex">
+            <i class="fa-solid fa-arrow-down"></i>
+          </div>
         </div>
       </div>
     </div>
@@ -87,30 +94,24 @@
       </a>
       <div class="bottom-line dark"></div>
       <section id="slider2" class="splide first gallery-container flex" aria-label="Portfolio Gallery">
-        <div class="container">
+        <div class="container flex">
           <div class="card">
-            <img class="gallery-img" src="https://res.cloudinary.com/dt46itgw6/image/upload/v1655374973/1652341386106_mdlzrv.jpg" alt="">
+            <img class="gallery-img" src="https://res.cloudinary.com/dt46itgw6/image/upload/v1655726378/nac4_ogo6kv.jpg" alt="">
           </div>
           <div class="card">
-            <img class="gallery-img" src="https://res.cloudinary.com/dt46itgw6/image/upload/v1655374973/1652341386106_mdlzrv.jpg" alt="">
+            <img class="gallery-img" src="https://res.cloudinary.com/dt46itgw6/image/upload/v1655726378/nac3_npxkwf.jpg" alt="">
           </div>
           <div class="card">
-            <img class="gallery-img" src="https://res.cloudinary.com/dt46itgw6/image/upload/v1655374973/1652341386106_mdlzrv.jpg" alt="">
+            <img class="gallery-img" src="https://res.cloudinary.com/dt46itgw6/image/upload/v1655726378/nac2_wtycjd.jpg" alt="">
           </div>
           <div class="card">
-            <img class="gallery-img" src="https://res.cloudinary.com/dt46itgw6/image/upload/v1655374973/1652341386106_mdlzrv.jpg" alt="">
+            <img class="gallery-img" src="https://res.cloudinary.com/dt46itgw6/image/upload/v1655726378/nac1_gnwwvw.jpg" alt="">
           </div>  
-          <div class="card">
-            <img class="gallery-img" src="https://res.cloudinary.com/dt46itgw6/image/upload/v1655374973/1652341386106_mdlzrv.jpg" alt="">
-          </div>  
-          <div class="card">
-            <img class="gallery-img" src="https://res.cloudinary.com/dt46itgw6/image/upload/v1655374973/1652341386106_mdlzrv.jpg" alt="">
-          </div>
         </div>
         <section class="description-container flex">
           <p>
-            A Linkedin-like website that allows BeCode students to have a greater presence and reach online, by allowing companies access to the profiles of potential future employees.
-            I built the rest api using Node.js and Express and then other members of the group project took care of the frontend part and plugged their routes on my backend.
+            Have you ever found yourself in that situation where you have to plan out your week of grocery and simply can't choose what you're gonna eat ? <br><br> Not Another Cookbook is the solution.
+            Create your own recipes or add them directly from your favorite cooking website.<br> Pick the meals you want, adjust the portions and that's it !<br><br> Your grocery list is generated, filtered in categories to make your experience as smooth and efficient as possible.
           </p>
         </section>
       </section>
@@ -150,17 +151,14 @@
       </div>
       <section class="description-container flex">
         <p>
-          A Linkedin-like website that allows BeCode student to have a greater presence and reach online, by allowing companies access to the profiles of potential employees available at the tips of their fingers.
-          I built the rest api using Node.js and Express and then other members of the group project took care of the frontend part and plugged their routes on my backend.
+          A Linkedin-like website that allows BeCode student to have a greater presence and reach online, by allowing companies access to the profiles of potential employees available at the tips of their fingers. <br><br>
+          I built the rest api using Node.js and Express and then other members of the class took care of the frontend part and used the routes on my backend.
         </p>
       </section>
     </section>
-
-
   </section>
-
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script defer src="../init-firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-analytics.js"></script>
 </body>
-<!-- Do you also struggle to plan out your meals for the week when that dreaded time of grocery shopping comes around ?
-All that struggle is eliminated with Not Another Cookbook, you can create custom recipes or get them from your favorite cooking website by simply pasting an url.
-You add your favorites to the meal plan, decide the portions and that's it, a shopping list is created, adjusted with quantities, aswell as separated by categories to make your trip to the store as fast and efficient as possible.  -->
 </html>
