@@ -1,6 +1,7 @@
 {
   "hosting": {
     "site": "clementvermylen",
-    "public": "public"
+    "public": "./views",
+    "cleanUrls": true
   }
 }

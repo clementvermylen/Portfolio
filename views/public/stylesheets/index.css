@@ -1,0 +1,625 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@-webkit-keyframes displaceContent {
+  from {
+    -webkit-transform: translateY(0em);
+            transform: translateY(0em);
+  }
+  to {
+    -webkit-transform: translateY(80vh);
+            transform: translateY(80vh);
+  }
+}
+
+@keyframes displaceContent {
+  from {
+    -webkit-transform: translateY(0em);
+            transform: translateY(0em);
+  }
+  to {
+    -webkit-transform: translateY(80vh);
+            transform: translateY(80vh);
+  }
+}
+
+@-webkit-keyframes displaceContentLeft {
+  from {
+    -webkit-transform: translateX(0em);
+            transform: translateX(0em);
+  }
+  to {
+    -webkit-transform: translateX(20vw);
+            transform: translateX(20vw);
+  }
+}
+
+@keyframes displaceContentLeft {
+  from {
+    -webkit-transform: translateX(0em);
+            transform: translateX(0em);
+  }
+  to {
+    -webkit-transform: translateX(20vw);
+            transform: translateX(20vw);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #282A3A;
+}
+
+.vcard {
+  height: 100vh;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.vcard .main-container {
+  margin-left: 40vh;
+  background-color: #282A3A;
+  height: 65%;
+  width: 60%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  bottom: 100vh;
+  position: absolute;
+  -webkit-animation-name: displaceContent;
+          animation-name: displaceContent;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.vcard .main-container .picture-container {
+  border-radius: 10px;
+  background-color: #B3B5BD;
+  width: 35%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  -webkit-box-shadow: 0 2.8px 2.2px rgba(40, 42, 58, 0.034), 0 6.7px 5.3px rgba(40, 42, 58, 0.034), 0 12.5px 10px rgba(40, 42, 58, 0.034), 0 22.3px 17.9px rgba(40, 42, 58, 0.034), 0 41.8px 33.4px rgba(40, 42, 58, 0.034), 0 100px 80px rgba(40, 42, 58, 0.034);
+          box-shadow: 0 2.8px 2.2px rgba(40, 42, 58, 0.034), 0 6.7px 5.3px rgba(40, 42, 58, 0.034), 0 12.5px 10px rgba(40, 42, 58, 0.034), 0 22.3px 17.9px rgba(40, 42, 58, 0.034), 0 41.8px 33.4px rgba(40, 42, 58, 0.034), 0 100px 80px rgba(40, 42, 58, 0.034);
+}
+
+.vcard .main-container .picture-container:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.vcard .main-container .picture-container .name {
+  padding-bottom: 1vh;
+  font-size: 14px;
+  font-family: "Ubuntu", sans-serif;
+  color: #FFFE;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.vcard .main-container .picture-container .name h1 {
+  text-align: center;
+}
+
+.vcard .main-container .picture-container .title {
+  padding-bottom: 1vh;
+  font-size: 14px;
+  font-family: "Ubuntu", sans-serif;
+  color: #121825;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.vcard .main-container .picture-container .title h2 {
+  text-align: center;
+}
+
+.vcard .main-container .picture-container .socials {
+  padding-bottom: 2.5vh;
+  width: 30%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.vcard .main-container .picture-container .socials .linkedin {
+  font-size: 30px;
+  cursor: pointer;
+  color: #121825;
+}
+
+.vcard .main-container .picture-container .socials .linkedin a:link {
+  text-decoration: none;
+}
+
+.vcard .main-container .picture-container .socials .linkedin a:visited {
+  text-decoration: none;
+}
+
+.vcard .main-container .picture-container .socials .linkedin a:hover {
+  text-decoration: none;
+}
+
+.vcard .main-container .picture-container .socials .linkedin a:active {
+  text-decoration: none;
+}
+
+.vcard .main-container .picture-container .socials .github {
+  color: #121825;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.vcard .main-container .picture-container .socials .github a:link {
+  text-decoration: none;
+}
+
+.vcard .main-container .picture-container .socials .github a:visited {
+  text-decoration: none;
+}
+
+.vcard .main-container .picture-container .socials .github a:hover {
+  text-decoration: none;
+}
+
+.vcard .main-container .picture-container .socials .github a:active {
+  text-decoration: none;
+}
+
+.vcard .main-container div.about-me {
+  background: #282A3A;
+  width: 60%;
+  font-family: "Ubuntu", sans-serif;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.vcard .main-container div.about-me .h1 {
+  color: #FFFE;
+  font-size: 30px;
+  padding-bottom: 1.5vh;
+  padding-top: 2vh;
+}
+
+.vcard .main-container div.about-me .h2 {
+  background: #6699cc;
+  background: linear-gradient(97deg, #6699cc 0%, #b3b5bd 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6699cc",endColorstr="#b3b5bd",GradientType=1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 18px;
+  width: 70vh;
+  padding-bottom: 10px;
+}
+
+.vcard .main-container div.about-me .h2 :first-child {
+  padding-right: 5px;
+}
+
+.vcard .main-container div.about-me .nav-line {
+  background-color: #B3B5BD;
+  width: 35vh;
+  min-height: 1px;
+}
+
+.vcard .main-container div.about-me .skills-list {
+  padding-top: 2vh;
+  width: 60vh;
+  height: 5vh;
+  gap: 10px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #6699cc;
+  background: linear-gradient(97deg, #6699cc 0%, #b3b5bd 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6699cc",endColorstr="#b3b5bd",GradientType=1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.vcard .main-container div.about-me .skills-list .skill {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  background: #6699cc;
+  background: linear-gradient(97deg, #6699cc 0%, #b3b5bd 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6699cc",endColorstr="#b3b5bd",GradientType=1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 85px;
+  height: 25px;
+}
+
+.vcard .main-container div.about-me .p {
+  padding-top: 2vh;
+  color: #B3B5BD;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+}
+
+.vcard .main-container div.about-me .button-container {
+  padding-top: 3vh;
+  font-weight: bold;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.vcard .main-container div.about-me .button-container .resume {
+  background: #6699cc;
+  background: linear-gradient(97deg, #6699cc 0%, #b3b5bd 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6699cc",endColorstr="#b3b5bd",GradientType=1);
+  -webkit-text-fill-color: #121825;
+  text-decoration: none;
+  color: #121825;
+  border: 1px solid;
+  border-radius: 30px;
+  height: 6vh;
+  width: 10vw;
+  background-color: #121825;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-box-shadow: 0 2.8px 2.2px rgba(40, 42, 58, 0.034), 0 6.7px 5.3px rgba(40, 42, 58, 0.034), 0 12.5px 10px rgba(40, 42, 58, 0.034), 0 22.3px 17.9px rgba(40, 42, 58, 0.034), 0 41.8px 33.4px rgba(40, 42, 58, 0.034), 0 100px 80px rgba(40, 42, 58, 0.034);
+          box-shadow: 0 2.8px 2.2px rgba(40, 42, 58, 0.034), 0 6.7px 5.3px rgba(40, 42, 58, 0.034), 0 12.5px 10px rgba(40, 42, 58, 0.034), 0 22.3px 17.9px rgba(40, 42, 58, 0.034), 0 41.8px 33.4px rgba(40, 42, 58, 0.034), 0 100px 80px rgba(40, 42, 58, 0.034);
+}
+
+.vcard .main-container div.about-me .button-container .resume:hover {
+  background: #6699cc;
+  background: linear-gradient(97deg, #6699cc 0%, #b3b5bd 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6699cc",endColorstr="#b3b5bd",GradientType=1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #FFFE;
+}
+
+.vcard .main-container div.about-me .portfolio-container {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-top: 11vh;
+}
+
+.vcard .main-container div.about-me .portfolio-container .portfolio {
+  background: #6699cc;
+  background: linear-gradient(97deg, #6699cc 0%, #b3b5bd 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6699cc",endColorstr="#b3b5bd",GradientType=1);
+  -webkit-text-fill-color: #121825;
+  text-decoration: none;
+  color: #121825;
+  border: 1px solid;
+  border-radius: 30px;
+  height: 4vw;
+  width: 4vw;
+  background-color: #121825;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-box-shadow: 0 2.8px 2.2px rgba(40, 42, 58, 0.034), 0 6.7px 5.3px rgba(40, 42, 58, 0.034), 0 12.5px 10px rgba(40, 42, 58, 0.034), 0 22.3px 17.9px rgba(40, 42, 58, 0.034), 0 41.8px 33.4px rgba(40, 42, 58, 0.034), 0 100px 80px rgba(40, 42, 58, 0.034);
+          box-shadow: 0 2.8px 2.2px rgba(40, 42, 58, 0.034), 0 6.7px 5.3px rgba(40, 42, 58, 0.034), 0 12.5px 10px rgba(40, 42, 58, 0.034), 0 22.3px 17.9px rgba(40, 42, 58, 0.034), 0 41.8px 33.4px rgba(40, 42, 58, 0.034), 0 100px 80px rgba(40, 42, 58, 0.034);
+}
+
+.vcard .main-container div.about-me .portfolio-container .portfolio:hover {
+  background: #6699cc;
+  background: linear-gradient(97deg, #6699cc 0%, #b3b5bd 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6699cc",endColorstr="#b3b5bd",GradientType=1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #FFFE;
+}
+
+.polygon1 {
+  right: 65vw;
+  position: absolute;
+  -webkit-animation-name: displaceContentLeft;
+          animation-name: displaceContentLeft;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-clip-path: polygon(0 0, 32% 0, 20% 100%, 0 100%);
+          clip-path: polygon(0 0, 32% 0, 20% 100%, 0 100%);
+  background: #6699cc;
+  background: linear-gradient(97deg, #6699cc 0%, #b3b5bd 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6699cc",endColorstr="#b3b5bd",GradientType=1);
+  -webkit-text-fill-color: #121825;
+  height: 100%;
+  width: 55%;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-box-shadow: 0 2.8px 2.2px rgba(40, 42, 58, 0.034), 0 6.7px 5.3px rgba(40, 42, 58, 0.034), 0 12.5px 10px rgba(40, 42, 58, 0.034), 0 22.3px 17.9px rgba(40, 42, 58, 0.034), 0 41.8px 33.4px rgba(40, 42, 58, 0.034), 0 100px 80px rgba(40, 42, 58, 0.034);
+          box-shadow: 0 2.8px 2.2px rgba(40, 42, 58, 0.034), 0 6.7px 5.3px rgba(40, 42, 58, 0.034), 0 12.5px 10px rgba(40, 42, 58, 0.034), 0 22.3px 17.9px rgba(40, 42, 58, 0.034), 0 41.8px 33.4px rgba(40, 42, 58, 0.034), 0 100px 80px rgba(40, 42, 58, 0.034);
+}
+
+section.portfolio {
+  height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.portfolio .header {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 10vh;
+  width: 100vw;
+  font-family: "Ubuntu", sans-serif;
+}
+
+section.portfolio .header-title {
+  padding-bottom: 5vh;
+}
+
+section.portfolio .bottom-line {
+  background-color: #B3B5BD;
+  width: 30vh;
+  height: 1px;
+  margin-top: 2vh;
+}
+
+section.portfolio .gallery-container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90vw;
+  height: 60vh;
+  visibility: visible;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 140px;
+}
+
+section.portfolio .project-title {
+  font-size: 22px;
+  color: #B3B5BD;
+  font-family: "Ubuntu", sans-serif;
+  text-decoration: none;
+}
+
+section.portfolio .project-title a:link {
+  text-decoration: none;
+}
+
+section.portfolio .project-title a:visited {
+  text-decoration: none;
+}
+
+section.portfolio .project-title a:hover {
+  text-decoration: none;
+}
+
+section.portfolio .project-title a:active {
+  text-decoration: none;
+}
+
+section.portfolio .project-title h2 {
+  font-size: 22px;
+  color: #B3B5BD;
+  font-family: "Ubuntu", sans-serif;
+  -webkit-transition: 0.4s ease-out all;
+  transition: 0.4s ease-out all;
+}
+
+section.portfolio .project-title h2:hover {
+  text-decoration: none;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+section.portfolio h1 {
+  font-size: 30px;
+  color: #B3B5BD;
+}
+
+section.portfolio .container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 300px;
+  width: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section.portfolio .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 340px;
+  width: 400px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 2.8px 2.2px rgba(40, 42, 58, 0.034), 0 6.7px 5.3px rgba(40, 42, 58, 0.034), 0 12.5px 10px rgba(40, 42, 58, 0.034), 0 22.3px 17.9px rgba(40, 42, 58, 0.034), 0 41.8px 33.4px rgba(40, 42, 58, 0.034), 0 100px 80px rgba(40, 42, 58, 0.034);
+          box-shadow: 0 2.8px 2.2px rgba(40, 42, 58, 0.034), 0 6.7px 5.3px rgba(40, 42, 58, 0.034), 0 12.5px 10px rgba(40, 42, 58, 0.034), 0 22.3px 17.9px rgba(40, 42, 58, 0.034), 0 41.8px 33.4px rgba(40, 42, 58, 0.034), 0 100px 80px rgba(40, 42, 58, 0.034);
+  margin-left: 100px;
+  -webkit-transition: 0.4s ease-out all;
+  transition: 0.4s ease-out all;
+  position: relative;
+  left: 0px;
+}
+
+section.portfolio .card:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+section.portfolio .card:not(:first-child) {
+  margin-left: -100px;
+}
+
+section.portfolio .card:hover ~ .card {
+  position: relative;
+  left: 110px;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+}
+
+div.slide {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.splide__slide__container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.slide-container {
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  height: 30vh;
+  width: 80vh;
+}
+
+.gallery-img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.description-container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Raleway", sans-serif;
+  width: 30%;
+  height: 100%;
+  margin-right: 5vh;
+}
+
+.description-container p {
+  padding-bottom: 3vh;
+  padding-top: 3vh;
+  color: #B3B5BD;
+}
+
+section.first {
+  background: #6699cc;
+  background: linear-gradient(97deg, #6699cc 0%, #b3b5bd 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6699cc",endColorstr="#b3b5bd",GradientType=1);
+  -webkit-text-fill-color: #121825;
+}
+
+section.first .dark {
+  background-color: #121825 !important;
+}
+
+section.first p {
+  color: #121825 !important;
+}
+
+section.first h1 {
+  color: #121825 !important;
+}
+
+section.first h2 {
+  color: #121825 !important;
+}
+
+section.second {
+  background-color: #282A3A;
+}
+/*# sourceMappingURL=index.css.map */
