@@ -2,10 +2,12 @@ $roboto: 'Roboto', sans-serif;
 $ubuntu: 'Ubuntu', sans-serif;
 $raleway: 'Raleway', sans-serif;
 
+$blue: #6699CC;
 $green: #27CD15;
 $darkgray: #121825;
 $mediumgray: #282A3A;
 $lightgray: #B3B5BD;
+$white: #FFFE;
 
 @mixin shadow {
     box-shadow:
@@ -54,22 +56,22 @@ $lightgray: #B3B5BD;
 // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7ee8fa",endColorstr="#dd4fec",GradientType=1);
 
 @mixin colorGradient {
-background: rgb(126,232,250);
-background: -moz-linear-gradient(97deg, rgba(126,232,250,1) 0%, rgba(221,79,236,1) 100%);
-background: -webkit-linear-gradient(97deg, rgba(126,232,250,1) 0%, rgba(221,79,236,1) 100%);
-background: linear-gradient(97deg, rgba(126,232,250,1) 0%, rgba(221,79,236,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7ee8fa",endColorstr="#dd4fec",GradientType=1);
+    background: rgb(102,153,204);
+    background: -moz-linear-gradient(97deg, rgba(102,153,204,1) 0%, rgba(179,181,189,1) 100%);
+    background: -webkit-linear-gradient(97deg, rgba(102,153,204,1) 0%, rgba(179,181,189,1) 100%);
+    background: linear-gradient(97deg, rgba(102,153,204,1) 0%, rgba(179,181,189,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6699cc",endColorstr="#b3b5bd",GradientType=1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 @mixin bgGradient {
-background: rgb(126,232,250);
-background: -moz-linear-gradient(97deg, rgba(126,232,250,1) 0%, rgba(221,79,236,1) 100%);
-background: -webkit-linear-gradient(97deg, rgba(126,232,250,1) 0%, rgba(221,79,236,1) 100%);
-background: linear-gradient(97deg, rgba(126,232,250,1) 0%, rgba(221,79,236,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7ee8fa",endColorstr="#dd4fec",GradientType=1);
-    -webkit-text-fill-color: white;
+    background: rgb(102,153,204);
+    background: -moz-linear-gradient(97deg, rgba(102,153,204,1) 0%, rgba(179,181,189,1) 100%);
+    background: -webkit-linear-gradient(97deg, rgba(102,153,204,1) 0%, rgba(179,181,189,1) 100%);
+    background: linear-gradient(97deg, rgba(102,153,204,1) 0%, rgba(179,181,189,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6699cc",endColorstr="#b3b5bd",GradientType=1);
+    -webkit-text-fill-color: $darkgray;
 }
 
 
@@ -89,6 +91,10 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7ee8fa",endCo
     from { transform : translateY(0em) }
     to   { transform : translateY(80vh) }
 }
+@keyframes displaceContentLeft {
+    from { transform : translateX(0em) }
+    to   { transform : translateX(20vw) }
+}
 
 html {
     scroll-behavior: smooth;
@@ -101,6 +107,7 @@ body {
     .vcard {
       height: 100vh;
       justify-content: flex-start;
+      flex-direction: column;
       .main-container {
         margin-left: 40vh;
           background-color: $mediumgray;
@@ -121,12 +128,16 @@ body {
               flex-direction: column;
               justify-content: flex-end;
               align-items: center;
+              transition: all .4s ease-in-out;
             @include shadow();
+            &:hover {
+                transform: scale(1.05);
+            }
               .name {
                 padding-bottom: 1vh;
                 font-size: 14px;
                 font-family: $ubuntu;
-                color: rgb(238, 231, 231);
+                color: $white;
                 justify-content: center;
                     h1 {
                         text-align: center;
@@ -136,7 +147,7 @@ body {
                 padding-bottom: 1vh;
                 font-size: 14px;
                 font-family: $ubuntu;
-                @include colorGradient();
+                color: $darkgray;
                 justify-content: center;
                     h2 {
                         text-align: center;
@@ -188,7 +199,7 @@ body {
             font-family: $ubuntu;
             flex-direction: column;
             .h1 {
-                color: rgb(238, 231, 231);
+                color: $white;
                 font-size: 30px;
                 padding-bottom: 1.5vh;
                 padding-top: 2vh;
@@ -197,17 +208,21 @@ body {
                 @include colorGradient();
                 font-size: 18px;
                 width: 70vh;
-                padding-bottom: 5px;
+                padding-bottom: 10px;
+                :first-child {
+                    padding-right: 5px;
+                }
             }
             .nav-line {
                 background-color: $lightgray;
                 width: 35vh;
-                height: 1px;
+                min-height: 1px;
             }
             .skills-list {
                 padding-top: 2vh;
-                width: 70vh;
+                width: 60vh;
                 height: 5vh;
+                gap: 10px;
                 justify-content: flex-start;
                 align-items: center;
                 @include colorGradient();
@@ -217,26 +232,25 @@ body {
                     @include colorGradient();
                     width: 85px;
                     height: 25px;
-                    margin-right: 1vh;
                 }
             }
             .p{
-                padding-top: 5vh;
+                padding-top: 2vh;
                 color: $lightgray;
                 font-family: $raleway;
                 font-size: 16px;
             }
             .button-container {
-                padding-top: 8vh;
+                padding-top: 3vh;
                 font-weight: bold;
                 flex-direction: row;
                 width: 100%;
-                justify-content: space-evenly;
+                justify-content: flex-start;
                 align-items: center;
                 .resume {
                     @include bgGradient();
                     text-decoration: none;
-                    color: $lightgray;
+                    color: $darkgray;
                     border: 1px solid;
                     border-radius: 30px;
                     height: 6vh;
@@ -251,40 +265,51 @@ body {
                     @include shadow();
                     &:hover {
                         @include colorGradient();
-                        color: white;
+                        color: $white;
                     }
 
                 }
-                .portfolio {
-                    @include bgGradient();
-                    text-decoration: none;
-                    color: $lightgray;
-                    border: 1px solid;
-                    border-radius: 30px;
-                    height: 6vh;
-                    width: 10vw;
-                    background-color: $darkgray;
-                    justify-content: center;
-                    align-items: center;
-                    cursor: pointer;
-                    transition-property: all;
-                    transition-timing-function: linear;
-                    transition-duration: 0.6s;
-                    @include shadow();
-                    &:hover {
-                        @include colorGradient();
-                        color: white;
-                    }
-                }
-                
             }
-
+            .portfolio-container {
+                justify-content: flex-start;
+                align-content: center;
+                margin-top: 11vh;
+              .portfolio {
+                  @include bgGradient();
+                  text-decoration: none;
+                  color: $darkgray;
+                  border: 1px solid;
+                  border-radius: 30px;
+                  height: 4vw;
+                  width: 4vw;
+                  background-color: $darkgray;
+                  justify-content: center;
+                  align-items: center;
+                  cursor: pointer;
+                  transition-property: all;
+                  transition-timing-function: linear;
+                  transition-duration: 0.6s;
+                  @include shadow();
+                  &:hover {
+                      @include colorGradient();
+                      color: $white;
+                  }
+              }
+            }
           }
       }
+
     }
     .polygon1 {
+        right: 65vw;
+        position: absolute;
+        animation-name            : displaceContentLeft;
+        animation-duration        : 1s;
+        animation-delay           : 0s;
+        animation-iteration-count : 1;
+        animation-fill-mode       : forwards;
         clip-path: polygon(0 0, 32% 0, 20% 100%, 0 100%);
-        background-color: #6699CC;
+        @include bgGradient();
         height: 100%;
         width: 55%;
         align-self: flex-start;
@@ -320,23 +345,36 @@ body {
         height: 60vh;
         visibility: visible;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
+        gap: 140px;
+    }
+    .project-title {
+        font-size: 22px;
+        color: $lightgray;
+        font-family: $ubuntu;
+        text-decoration: none;
+        a:link {
+            text-decoration: none;
+        }
+        a:visited {
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: none;
+
+        }
+        a:active {
+            text-decoration: none;
+        }
     }
         .project-title h2{
             font-size: 22px;
             color: $lightgray;
             font-family: $ubuntu;
-            &h2:link {
+            transition: 0.4s ease-out all;
+            &:hover {
                 text-decoration: none;
-            }
-            &h2:visited {
-                text-decoration: none;
-            }
-            &h2:hover {
-                text-decoration: none;
-            }
-            &h2:active {
-                text-decoration: none;
+                transform: scale(1.05);
             }
         }
         h1{
@@ -344,6 +382,7 @@ body {
             color: $lightgray;
         }
         .container {
+            align-items: center;
             height: 300px;
             width: 600px;
             display: flex;
@@ -351,14 +390,17 @@ body {
           
           .card {
             display: flex;
-            height: 280px;
+            height: 340px;
             width: 400px;
             border-radius: 10px;
         @include shadow();
             margin-left: 100px; 
-            transition: 0.4s ease-out;
+            transition: 0.4s ease-out all;
             position: relative;
             left: 0px;
+            &:hover {
+                transform: scale(1.05);
+            }
           }
           
           .card:not(:first-child) {
@@ -367,17 +409,10 @@ body {
           
           .card:hover ~ .card {
             position: relative;
-            left: 105px;
+            left: 110px;
             transition: 0.4s ease-out;
           }
-          
-          .title {
-            color: white;
-            font-weight: 300;
-            position: absolute;
-            left: 20px;
-            top: 15px;
-          }
+
     }
         div.slide {
             font-family: $ubuntu;
@@ -412,7 +447,7 @@ body {
         }
     
     section.first {
-        background-color: #6699CC;
+        @include bgGradient();
         .dark {
             background-color: #121825 !important;
         }

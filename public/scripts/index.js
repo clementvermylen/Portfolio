@@ -1,20 +1,8 @@
-
-// var elms = document.getElementsByClassName( 'splide' );
-
-// for ( var i = 0; i < elms.length; i++ ) {
-//   new Splide( elms[ i ], {
-//     type: 'loop',
-//     arrow: false,
-//     padding: {left:"15rem", right:"15rem"},
-//     gap:'-12rem'
-//   } ).mount();
-// }
-
 //smooth scroll
 
 function scrollDown() {
   window.scroll({
-    top: 655,
+    top: 658,
     left: 0,
     behavior:'smooth',
     fixedHeight: '20vh',
@@ -25,11 +13,3 @@ function scrollDown() {
   portfolioBtn.addEventListener('click', () => {
     scrollDown()
   })
-
-
-
-
-
-
-
-    
