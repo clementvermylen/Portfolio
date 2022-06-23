@@ -1,4 +1,4 @@
-# Portfolio ( In Progres )
+# Portfolio ( In Progress )
 ---
 This project has been deployed on [Google Cloud's Firebase](https://firebase.google.com/).
 ---
